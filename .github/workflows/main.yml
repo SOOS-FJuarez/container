@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  soos_csa_analysis:
+    name: SOOS CSA Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run SOOS CSA Analysis
+        uses: soos-io/soos-csa-github-action@v1 # GET Latest Version from https://github.com/marketplace/actions/soos-csa
+        with:
+          client_id: ${{ secrets.SOOS_CLIENT_ID }}
+          api_key: ${{ secrets.SOOS_API_KEY }}
+          api_url: "https://qa-api.soos.io/api/"
+          project_name: "GH Actions - Container"
+          target_image: "debian"
+          log_level: "DEBUG"
