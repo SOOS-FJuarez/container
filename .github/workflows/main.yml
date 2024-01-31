@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run SOOS CSA Analysis
-        uses: soos-io/soos-csa-github-action@fix/PA-12699 # GET Latest Version from https://github.com/marketplace/actions/soos-csa
+        uses: soos-io/soos-csa-github-action@v1.0.2 # GET Latest Version from https://github.com/marketplace/actions/soos-csa
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"
           project_name: "GH Actions - Container"
-          target_image: "debian"
+          #target_image: "debian"
           log_level: "DEBUG"
