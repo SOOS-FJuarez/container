@@ -13,5 +13,5 @@ jobs:
           api_url: "https://qa-api.soos.io/api/"
           project_name: "CSA redis"
           target_image: "redis"
-          image_tag: latest
+          image_tag: latest 
   
